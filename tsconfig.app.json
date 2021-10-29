@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "module": "es6",
+    "baseUrl": "",
+    "types": ["node"]
+    
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "test.ts",
+    "src/**/*.d.ts"
+  ]
+}
+

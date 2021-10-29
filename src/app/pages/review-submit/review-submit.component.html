@@ -1,0 +1,118 @@
+<div>
+    <mat-accordion>
+     
+      <mat-expansion-panel >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           Property details
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <h3><b><u>Your Property Adress :</u></b></h3>
+        <h4>Post code : {{formPropertyData.value.postCode}}</h4>
+        <h4> Address : {{formPropertyData.value.propertyAddress}}</h4>
+        <h3><b><u>Your Property Details :</u></b></h3>
+        <h4>Property Type:  {{formPropertyData.value.propertyType}}</h4>
+        <h4> NO. of bedrooms : {{formPropertyData.value.numberOfBedrooms}}</h4>
+        <h4> Property Year : {{formPropertyData.value.propertyAge}}</h4><br>
+        <h4> Tenure Type : {{formPropertyData.value.tenureType}}</h4><br>
+        <!-- <input type="button" class="button_css" value="review" style="float: right;"> -->
+        <button type="submit" class="btn btn-danger reviewbtn" (click)="backToproprty();">Edit</button>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Valuation
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <h4>Is property in scotland(Y/N) ? {{formValutionData.value.is_property}}</h4>
+        <h4>Contact details : {{formValutionData.value.field_Sel}}
+        <br>Contact name : {{formValutionData.value.contact_name}}
+        <br>Contact number : {{formValutionData.value.contact_number}}</h4><br>
+        <h4>Are you purchasing property directly from seller?  {{formValutionData.value.r_u_purchasing}}</h4>
+        <!-- <input type="button" class="button_css" value="review" style="float: right;"> -->
+        <button type="submit" class="btn btn-danger reviewbtn" (click)="backToValuation()">Edit</button>
+    
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+          Other Occupants
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <h3>Anyone above 17 years of age living with you ? {{formOccupantsData.value.personWithAgelessThen17}} </h3>
+        <!-- <input type="button" class="button_css" value="review" style="float: right;"> -->
+        <button type="submit" class="btn btn-danger reviewbtn" (click)="backToOccupants()">Edit</button>
+      </mat-expansion-panel>
+    
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+        Solicitor details
+        </mat-panel-title>
+        
+      </mat-expansion-panel-header>
+      <section class="example-section">
+        <h4>Would you like to search and select a solicitor or convayncer from our approved portal now?*:  {{formOccupantsData.value.satanderApprovedSolicitor}}</h4>
+
+        <h4>Do you want to submit this application with out solicitor or convayncer details and provide them later?could delay your application: {{formOccupantsData.value.withSolicitor}}</h4>
+      </section>
+      <br>
+      <br>
+      <!-- <input type="button" class="button_css" value="review" style="float: right;"> -->
+      <button type="submit" class="btn btn-danger reviewbtn" (click)="backToOccupants()">Edit</button>
+    
+    
+    </mat-expansion-panel>
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             Payment details
+            </mat-panel-title>
+            
+          </mat-expansion-panel-header>
+          <h3><b><u>Your Direct Debit details </u></b></h3>
+          <h4>Sort Code:{{formPaymentData.value.sortCode}}</h4>
+          <h4>Account Holder name : {{formPaymentData.value.accountHolderName}}</h4>
+          <h4>Account number : {{formPaymentData.value.accountNumber}}</h4>
+          <!-- <input type="button" class="button_css" value="review" style="float: right;"> -->
+          <button type="submit" class="btn btn-danger reviewbtn" (click)="backToPaymentDetails()">Edit Details</button>
+      </mat-expansion-panel>
+    
+      </mat-accordion><br>
+      
+    <h2><b><u> Declaration</u></b></h2>  
+    <hr>
+    <h3> By selecting to Continue Below:</h3>
+    <h4>You confirm that the details in the form are accurate and you have entitled to discuss information about any joint applicants,parents/spouse or other third party named on the application. You understand that Santander will use your information to carry out a soft credit check against all applicants with credits reference agencies. A soft credit check will show on your credit file so you will know that the search
+      has taken place but it doesnot affect your credit rating. You have read the data Protection Statement below. You understand that Santander will use your personal data and make checks on you as described in the Data Protection Statement .
+ </h4>
+    
+    <h3><u>General Mortages Declaration></u></h3>
+    <h3><u>Data Protection Statement></u></h3>
+    
+    <h5>If there is anything regarding this applicants that you are unsecure about please contact us before processing </h5>
+    <section class="example-section">
+        <mat-checkbox class="example-margin" (change)="changeCheck($event)">I agree to the Declaration,General Mortages Declaration and Data Protection Statement</mat-checkbox>
+      </section>
+    <br>
+    <br>
+    <!-- <input type="button" class="button_css" value="save_continue" style="float: right;"> -->
+    <button type="submit" [disabled]="disabledAgreement" class="btn btn-danger reviewbtn" (click)="savFinalData();">save_continue</button>
+    <button type="submit" class="btn btn-danger reviewback">save_comeback</button><br><br><br>
+    <a href=""> Back</a>
+    <a href="" style="float: right;">Cancel</a><br><br>
+    
+    <h4><b>Important Information</b></h4>
+    <h4><b>YOUR HOMEMAY BE REPOSSESSED IF YOU DONOT KEEP UP REPAYMENTS ON YOUR<br> MORTAGE</b></h4>
+    
+    
+    
+    
+    </div>
+      
+

@@ -1,0 +1,96 @@
+<div class="registerForm">
+    <h1>
+    Get a decision in principle and then apply online
+</h1>
+
+<h3>Befor you start we want to let you know:</h3>
+<ul>
+    <li>We are regulated by the financial Conduct Authority</li>
+    <li>You will not charge a fee for this service. However you may be required to pay other fees as part of your mortgage application such as product or valuation fees. Details of these will be provided before you confirm your mortgage product</li>
+    <li>
+        We offer other borrowing options such as overdrafts, credit cards and personal loans which may be more suitable depending on your
+    </li>
+</ul>
+
+<h3>Apply Online with out advise</h3>
+<p>By applying online you won't receive any advice, you'll have the option to choose it after you've completed your online decision in principle</p>
+
+<hr>
+
+<h1> Get started</h1>
+<p>Please fill the detais below to include anyone who needs to be on the decision and mortgageapplication. you'll also be able to save your progress and continue with your application as and when it suits you.</p>
+
+<h4><b>Applicant information</b></h4>
+<span>(All the fields are required)<h4 class="requiredastric">*</h4></span>
+
+<div class="registerData">
+    <form [formGroup]="registerForm" (ngSubmit)="register()" >
+    <div class="row">
+        <div class="col-md-6">
+            <mat-form-field>
+                <input matInput placeholder="First Name" required formControlName="firstName">
+                
+              </mat-form-field><br>
+          
+              <mat-form-field>
+                  <input matInput placeholder="Last Name"  required formControlName="lastName">
+              </mat-form-field><br>
+          
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Date of Birth</mat-label>
+                  <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" formControlName="dateOfBirth">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field><br>
+          
+                <mat-form-field>
+                  <input matInput placeholder="Email Address" required formControlName="email">
+              </mat-form-field><br>
+          
+              <mat-form-field>
+                  <input type ="password" matInput placeholder="Password" required formControlName="password" >
+              </mat-form-field><br>
+          
+          
+              <mat-form-field>
+                  <input type="password" matInput placeholder="Confirm Password" required >
+              </mat-form-field><br>
+                         
+              <mat-form-field >
+                <mat-label>Select the quesction</mat-label>
+                <mat-select formControlName="forgetPasswordQ">
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+                </mat-select>
+                </mat-form-field>
+                <br>
+
+              <mat-form-field >
+                  <input matInput placeholder="Answer" required formControlName="forgetPasswordA">
+              </mat-form-field><br>
+
+        </div>
+        <div class="col-md-6">
+            <div class="registerAlert">
+                <mat-icon>info</mat-icon>
+                <p>By providing your email address and / or phone number you're agreeing we can send you any documents and updetes about your application by email and phone. This may include contacting you to see if we can help you in completing your application. Your details won't be used for marketing purpose without your permission.</p>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <button type="submit" mat-raised-button >Register</button>
+</form>
+   
+</div><br>
+<span>Already have an account?<a href="/" class="loginAgain"> Login</a></span>
+<br><br>
+
+<p><b>Important information</b></p>
+<div class="register_info">
+    <p><b>YOUR HOME MAY BE RESPOSSESSED IF YOU DO NOT KEEP UP REPAYMENTS ON YOUR MORTGAGE
+    </b></p>
+    <span>All applications are subject to status and our lending creteria. This means that the amount we will lend you will depend on your individual circumstances, the type of property and the amount your borrow. For example, we may require a higher deposit if you are buying a flat or a ne building property.</span>
+</div>
+</div>

@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="loginlogo"><img src="assets/img/login_logo.jpg" alt="image"></div>
+    <div class="modal-login">
+        <!-- <div class="input-group flex-nowrap">
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap">
+        <label>Password</label>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="addon-wrapping">
+    </div> -->
+
+        <form class="borderbox" [formGroup]="loginForm" (ngSubmit)="login()" name="myFormData">
+            <mat-form-field>
+                <input matInput placeholder="Email Address"  name="someName" ng-model="someModel"  formControlName="email"  ng-required="true" >
+                </mat-form-field><br>
+          
+                <mat-form-field>
+                    <input type="password" (onchange)="enableloginData()" matInput placeholder="Password"  formControlName="pwd"  ng-required="true" >
+                    </mat-form-field>
+
+                    <div class="form-group">
+                        <re-captcha (resolved)="resolved($event)"></re-captcha>
+                       <span style="color: red;">{{errorMessage}}</span>
+                    </div>
+
+            <div class="form-group">
+            <button type="submit" class="btn btn-danger" >Log in</button>
+            </div>
+            <span>Click here if forget your password</span>
+            <div><p class="forgetlink" ><a href="#">forget password</a><br>
+            <a href="/register">register here</a></p></div>
+        </form>
+        
+    </div>
+</div>

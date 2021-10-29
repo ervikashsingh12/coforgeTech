@@ -1,0 +1,64 @@
+<div class="confirm-mortgage">
+    <h1 class="confirmMort">Confirm Mortgage</h1>
+    <p>Thank you for selection a mortgage product. you can download the mortgage illusition below. Please confirm that you would like to proceed with the choosen product or alternativly go back  and choose the different rate.</p>
+
+    <h6>Your choosen mortgage</h6>
+    <hr>
+    <div class="row ">
+        <div class="col-md-6">
+            <span>Fixed 5 years</span>
+                <h6>Buyer Type?</h6>
+                <h6>Mortgage term?</h6>
+                <h6>Estimated property value or purchase price</h6>
+                <h6>Loan to value(LTV)?</h6>
+                <h6>Initial rate</h6>
+                <h6>Differential to bank of England base rate </h6>
+                <p class="alignpara">NA</p>
+                <h6>Product fee</h6>
+                <h6>Additional Benifits</h6>
+                <p class="alignpara">See your mortgage illution for details</p>
+                <button type="submit" class="btn btn-danger confirmmortgage">Select a different mortgage</button>
+
+        </div>
+        <div class="col-md-6">
+            <br>
+            <h6>Repayment Method?</h6>
+            <h6>Early repayment charge(Ending your mortgage)?</h6>
+            <p class="alignpara">5% of the outstanding balance</p>
+            <h6>Borrowing Amount</h6><br>
+            <h6>Then changing to Santander's follow on rate(currently)</h6>
+            <h6>When does this rate finish</h6>
+            <h6>Product fee added to loan amount </h6>
+            <h6>Monthaly Payment amount</h6>
+
+        </div>
+
+    </div><br>
+    <span class="mortgageIllusition">Download your Mortgage illusition</span>
+    <div class="mortgageIllusitionBox">
+        <div class="row">
+            <div class="col-md-6 inboxdownload"></div>
+            <div class="col-md-6 confirmDownload ">
+                <button type="submit" class="btn btn-danger confirmdownloadbtn">Download</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" (change)="changeChecked($event)">Thank you for selection a mortgage product. you can download the mortgage illusition below</mat-checkbox>
+        <mat-checkbox class="example-margin" (change)="changeCheck($event)">I am Happy to proceed with this product I have selected</mat-checkbox>
+      </section>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-danger confirmdownloadbtn" (click)="saveandback();">Save and Back later</button>
+
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-danger confirmdownloadbtn"  [disabled]="disabledAgreement"  (click)="goproperty();">Continue</button>
+
+        </div>
+    </div>
+</div>

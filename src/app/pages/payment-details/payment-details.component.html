@@ -1,0 +1,67 @@
+<div class="paymentDetails">
+  <h1>Payment Details</h1>
+  <span>we would like to confirm some payment details for your mortgage and also understand if you're excepting any change to your <br>circumstances</span><br><br>
+
+  <p><b>Your currnt Circumstances</b></p>
+  <hr class="circum">
+  <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. <br>Food truck quinoa nesciunt laborum eiusmod. <br><br>Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</span><br><br>
+
+  <form class="borderbox" [formGroup]="addForm" (ngSubmit)="gosubmit()">
+  <p><b>Are your currently aware of any changes to your circumtances in the last 2 years that may affact your ability to pay this mortgage?*</b></p>
+<div>
+  <mat-button-toggle-group formControlName="currentCircumstances" ngDefaultControl>
+    <mat-button-toggle value="1" ngDefaultControl>Yes</mat-button-toggle>
+    <mat-button-toggle value="0" ngDefaultControl>No</mat-button-toggle>
+  </mat-button-toggle-group>
+  </div><br>
+    <p><b>Your Direct Debit details</b></p>
+  <hr class="circum">
+
+  <span>Which account do you want to monthly payments to be made from?</span>
+
+  <mat-form-field>
+      <input matInput placeholder="Sort code" formControlName="sortCode" required>
+      </mat-form-field><br>
+
+   <mat-form-field>
+          <input matInput placeholder="Account Number" formControlName="accountNumber" required>
+      </mat-form-field><br>
+
+  <mat-form-field>
+              <input matInput placeholder="Account holder name" formControlName="accountHolderName" required>
+   </mat-form-field><br>
+      <div>
+           <mat-button-toggle-group formControlName="dayOfPayment" ngDefaultControl>
+              <mat-button-toggle class="paybutton" value="1" ngDefaultControl>On first day of each month</mat-button-toggle>
+              <mat-button-toggle class="paybutton" value="0" ngDefaultControl>On a specific day each month</mat-button-toggle>
+            </mat-button-toggle-group><br><br>
+       </div>
+
+   <div class="paymentdetailsBox">
+     <p><b>Direct Debt gaurantee</b></p>
+     <p>The gaurnty is offered by all banks building societies that accept instructions to pay Direct Debts.</p>
+     <ul>
+       <li>
+        If you are any changes to the amount date, or frequency of your Direct Debt Santander will notify you five working days in advance of your account being debited or as otherwise aggreed.
+       </li>
+       <li>
+       if you request Santander to collect a payment confirmation of the amount and date will be given to you at the time of request.
+       </li>
+       <li>
+       If you receive a refund you are not entitled to you must pay it back when Santander UK plc asks you to.
+       </li>
+       <li>
+       If you cancle a Direct Debit at any time by simply contacting your bank or building Society. Written confirmation may be required
+        </li>
+     </ul>
+   </div><br>
+   <button type="submit"  class="btn btn-danger savePayments">Save & continue</button>
+  </form>
+<br><br><br>
+   <p><b>Important information</b></p>
+<div class="payment_impinformation">
+  <p> YOUR HOME MAY BE RESPOSSESSED IF YOU DO NOT KEEP UP REPAYMENTS ON YOUR MORTGAGE
+  </p>
+  <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee</span>
+</div>
+</div>

@@ -1,0 +1,56 @@
+<form [formGroup]="occupantsform" (ngSubmit)="submitFunc()">
+  <div class="other-occupants">
+      <div>
+      <h1 class="occupants">Other Occupants</h1>
+      <span>
+          Please provide details of anyone over the age of 17 who will be living at the property but who isn't name on the mortgage application<br> we will need the details so that we can send the deed of constant form to make sure they don't claim rights<br> over the property while they are living in it 
+      </span>  <br><br>
+        <h3>Other Occupants</h3>
+      <hr class="horiline">
+      <p><b>Will there will be anyone the age is over the 17 is living with you, whose name is not on the mortgage?*</b></p><br>
+      <div>
+        <mat-button-toggle-group name="personWithAgelessThen17" aria-label="personWithAgelessThen17" formControlName="personWithAgelessThen17">
+            <mat-button-toggle value="Yes">Yes</mat-button-toggle>
+            <mat-button-toggle value="No">No</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+  
+  
+      </div><br>
+        <div class="solicitor">
+          <h1 class="occupants">Solicitor details</h1>
+          <span>
+              You will need a Solicitor or conveyance to deal with things link hand registry.stamp duty chargesband collecting and transferring<br>money for the property
+          </span><br><br>
+  
+          <h3>About Your Solicitor</h3>
+          <hr class="horiline">
+          <p><b>you must appoint a Santander approved solicitor/conveyancer to deal with your mortgage application<br>Would you like to search and select a solicitor or convayncer from our approved portal now?*</b></p><br>
+          <div>
+            <mat-button-toggle-group name="satanderApprovedSolicitor" aria-label="satanderApprovedSolicitor" formControlName="satanderApprovedSolicitor">
+                <mat-button-toggle value="Yes">Yes</mat-button-toggle>
+                <mat-button-toggle value="No">No</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+            <p class="confirmation"><b>Do you want to submit this application with out solicitor or convayncer details and provide them later?could delay your application<br>could delay your application.*</b></p>
+            <div>
+              <mat-button-toggle-group name="withSolicitor" aria-label="Font Style" formControlName="withSolicitor">
+                  <mat-button-toggle value="Yes">Yes</mat-button-toggle>
+                  <mat-button-toggle value="No">No</mat-button-toggle>
+                </mat-button-toggle-group>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-danger occupantsSoli">Save_continue</button>
+  
+      
+      <div class="row backCancle">
+          <div class="col-sm-6">
+              <a href="" class="backBtn">Back</a>
+          </div>
+          <div class="col-sm-6">
+              <a href="" class="backBtn">Cancel</a>
+          </div>
+  </div>
+  </div>
+  </form>
+  

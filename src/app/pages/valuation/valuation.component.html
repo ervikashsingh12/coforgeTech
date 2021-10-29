@@ -1,0 +1,171 @@
+<div class="container">
+  <h3><b>Your valuation contact details</b></h3>
+  <hr style="width: 100%;height: 1.5px;margin-left: auto; margin-right: auto;background-color: #000000;"/>
+
+  
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <p>Is the property in Scotland ? *</p>
+      <mat-button-toggle-group name="is_Property" aria-label="Font Style" formControlName="is_property">
+      <mat-button-toggle value="Yes">Yes</mat-button-toggle>
+      <mat-button-toggle value="No">No</mat-button-toggle>
+    </mat-button-toggle-group>
+    </div>
+  
+  
+  <div class="mt-3">
+      <b> What happens next</b>
+      <div class="mt-3">
+          
+          <p> We'll complete a valuation when you are submitted your application and we've checked your
+              documents. If you required a survey then you should arrange this yourself. We've emailed you a 
+              'Straightforward Guide to your mortgage' which has details about how you could arrange this. 
+          </p>
+      </div>
+  </div>
+  
+  <div class="mt-4">
+      <b>Who should we contact if we need to arrange a valuation?<span style="color: red;"> *</span></b> 
+      <br/>       
+      <mat-form-field >    
+          <mat-label>Select</mat-label>
+          <mat-select formControlName="field_Sel">
+              <mat-option value="First option">sssss</mat-option>
+              <mat-option value="Second option">sssstring</mat-option>
+          </mat-select>
+         
+      </mat-form-field> 
+      <br/>   
+      <mat-form-field>
+          <input type="text" 
+          matInput placeholder="Contact Name"  
+          required formControlName="contact_name"> 
+      </mat-form-field> 
+      <br/>   
+      <mat-form-field>
+          <input type="number" 
+          matInput placeholder="Contact Number"  
+          required formControlName="contact_number"> 
+      </mat-form-field>                
+  </div>
+  
+  <div class="mt-3">
+      <b> Your Purchase</b>
+      <hr style="width: 100%; height: 1px; margin-left: auto; margin-right: auto; background-color: #000000;"/>
+      <p>
+          Are you Purchasing the property from the seller directly as a private sale? 
+          e.g. without using an estate agent, property develpoer or broker.<span style="color: red;"> *</span>
+      </p>
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style"
+      #matVal="matButtonToggleGroup" formControlName="r_u_purchasing">
+          <mat-button-toggle value="Yes">Yes</mat-button-toggle>
+          <mat-button-toggle value="No">No</mat-button-toggle>
+        </mat-button-toggle-group>
+  </div>
+
+  <div class="mt-5 container">
+      <!-- <button type="submit" 
+      class="btn float-right voilationbtn"
+      style="border-radius: 20px; background-color: red;" 
+      [disabled] = "myForm.invalid"> 
+          Save & Continue 
+      </button> -->
+      <button type="submit" class="btn btn-danger voilationbtn" [disabled] = "myForm.invalid" >Save & continue</button><br><br>
+  </div>
+</form>
+  <br/>
+  <div class="mt-5">
+      <h3><b>Important Information</b></h3>
+      <div class="mt-2">
+          <mat-card style="border: 1px solid; background-color:rgb(252, 250, 248); border-radius: 0%;">                
+              <b>
+                  YOUR HOME MAY BE REPROCESSED IF YOU DO NOT KEEP UP REPAYMENTS ON YOUR MORTGAGE
+              </b>
+              
+              <br/><br/>
+              <p>
+                  All applications are subject to status and our landing criteria. This means that the amount we will lend you will depend
+                  on your individual cir custanstances, the type of property and the amount you borrow. For example, we may required a higher 
+                  diposit if you are buying a flat or a new building property.
+              </p>
+          </mat-card>
+      </div>
+  </div>
+  
+
+</div>
+
+
+
+
+
+
+
+
+<!-- // New One  -->
+
+<!-- <div class="valuation">
+    <h1>Your valuation contact details</h1>
+    
+    <div>
+    <p>Is the property in Scotland ? *</p>
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="bold">Yes</mat-button-toggle>
+      <mat-button-toggle value="italic">No</mat-button-toggle>
+    </mat-button-toggle-group>
+    </div>
+    
+     
+    <div class="mt-3">
+    <b> What happens next</b>
+    <div class="mt-3">
+    
+    <p> We'll complete a valuation when you are submitted your application and we've checked your documents. If you required a survey then you should arrange this yourself. We've emailed you a 'Straightforward Guide to your mortgage' which has details about how you could arrange this. 
+    </p>
+    </div>
+    </div>
+     
+    <div class="mt-4">
+    <b>Who should we contact if we need to arrange a valuation?*</b>
+    <br>
+    <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select>
+    <mat-option value="one">First option</mat-option>
+    <mat-option value="two">Second option</mat-option>
+    </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <input matInput placeholder="Contact Name"required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <input matInput placeholder="Contact Number" required>
+    </mat-form-field>
+    </div>
+     
+    <div class="mt-3">
+    <b> Your Purchase</b>
+    <hr/>
+    <p>Are you Purchasing the property from the seller directly as a private sale? e.g. without using an estate agent, property develpoer or broker*
+    </p>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="bold">Yes</mat-button-toggle>
+      <mat-button-toggle value="italic">No</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    
+    </div>
+    <button type="submit" class="btn btn-danger voilationbtn" (click)="occupantsSolitor();">Save & continue</button><br><br>
+    <p><b>Important information</b></p>
+    <div class="discriptionbox">
+        <p><b>YOUR HOME MAY BE RESPOSSESSED IF YOU DO NOT KEEP UP REPAYMENTS ON YOUR MORTGAGE
+        </b></p>
+        <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee</span>
+    
+     
+    
+    </div>                                      
+     -->
+    

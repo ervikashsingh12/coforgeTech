@@ -1,0 +1,29 @@
+
+<app-header ></app-header>
+
+<div class="main-container">
+  <div class="row container">
+
+    <div class="col-md-4 main-header" *ngIf="showData">
+      <app-side-nav 
+      [sidenavTemplateRef]="navContent"
+      [direction]="'left'" 
+      [navWidth]="280" 
+      [duration]="0.5"></app-side-nav>
+    </div>
+
+    <div class="col-md-8 content-container">
+      <ng-template #navContent>
+        <app-side-nav-content></app-side-nav-content>
+      </ng-template>
+    <section>
+      <router-outlet></router-outlet>
+     
+    </section>
+    </div>
+  </div>
+
+</div>
+<app-footer></app-footer>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-clip-rotate" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+

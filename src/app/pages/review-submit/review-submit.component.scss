@@ -1,0 +1,35 @@
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .button_css
+{
+  background-color: red; 
+  color: black;
+  padding: 10px;
+  text-align: right;
+  text-align: center;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.reviewbtn{
+    float: right;
+    border-radius: 21px;
+    background-color: #FF0000;
+
+}
+.reviewback{
+    float: left;
+    border-radius: 21px;
+    background-color: #FF0000;
+}
+// .button_css{border-radius: 12px;}
+// div{
+//     background-color:whitesmoke;
+//     width:800px;
+//     padding-left:75px;
+//     padding-right: 100px;
+//     padding-bottom: 2px;
+//   }
